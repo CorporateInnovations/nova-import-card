@@ -24,8 +24,7 @@ class ImportController
             $resource,
             $resource->creationFields($request)->pluck('attribute'),
             $this->extractValidationRules($request, $resource)->toArray(),
-            get_class($resource->resource),
-            $request
+            get_class($resource->resource)
         );
 
         try {
